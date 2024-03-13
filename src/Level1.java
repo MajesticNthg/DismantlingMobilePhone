@@ -1,14 +1,12 @@
 public class Level1 {
 
-    public static String PatternUnlock(int N, int [] hits)  {
+    public static String PatternUnlock(int N, int[] hits) {
         double sum = 0;
-        double result_sum = 0;
 
         for (int x = 0; x < hits.length - 1; x++) {
-            if (hits[x+ 1] - hits[x] == 1)
+            if (hits[x + 1] - hits[x] == 1)
                 sum += 1;
-            else
-                if (hits[x] + hits[x + 1] == 8 || hits[x] + hits[x + 1] == 6 || hits[x] + hits[x + 1] == 11 || hits[x] + hits[x + 1] == 9)
+            else if (hits[x] + hits[x + 1] == 8 || hits[x] + hits[x + 1] == 6 || hits[x] + hits[x + 1] == 11 || hits[x] + hits[x + 1] == 9)
                 sum += 1.414213;
             else
                 sum += 1;
@@ -27,7 +25,7 @@ public class Level1 {
         int des = 1;
 
         for (int i = 0; sum > 0; i++, sum /= 10) {
-            f = (int)(sum % 10);
+            f = (int) (sum % 10);
             if (f != 0) {
                 sum2 += f * des;
                 des *= 10;
@@ -43,3 +41,5 @@ public class Level1 {
 
 
 }
+
+

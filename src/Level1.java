@@ -5,7 +5,7 @@ public class Level1 {
 
 
         for (int x = 0; x < hits.length - 1; x++) {
-            if (hits[x+ 1] - hits[x] == 1)
+            if (hits[x+ 1] - hits[x] == 1 || hits[x+ 1] - hits[x] == -1)
                 sum += 1;
             else
             if (hits[x] + hits[x + 1] == 8 || hits[x] + hits[x + 1] == 6 || hits[x] + hits[x + 1] == 11 || hits[x] + hits[x + 1] == 9)
@@ -42,4 +42,6 @@ public class Level1 {
     }
 
 
+
 }
+
